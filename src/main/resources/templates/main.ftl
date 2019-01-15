@@ -7,6 +7,7 @@
         <div>
             <textarea cols="40" rows="5" placeholder="Write your text here" name="text"> </textarea>
         </div>
+        <input type="hidden" name="_csrf" value="${_csrf.token}" />
         <button type="submit"> Post</button>
     </form>
 
