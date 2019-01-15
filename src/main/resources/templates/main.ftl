@@ -7,8 +7,6 @@
         <div>
             <textarea cols="40" rows="5" placeholder="Write your text here" name="text"> </textarea>
         </div>
-        <input type="text" name="author" placeholder="Write your name">
-
         <button type="submit"> Post</button>
     </form>
 

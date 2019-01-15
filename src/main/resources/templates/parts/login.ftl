@@ -3,7 +3,7 @@
         <div><label> User Name : <input type="text" name="username"/> </label></div>
         <div><label> Password: <input type="password" name="password"/> </label></div>
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
-        <#if path == "/registration">
+        <#if "${path}" == "/registration">
             <div><input type="submit" value="Register"/></div>
         <#else>
             <div><input type="submit" value="Sign In"/></div>

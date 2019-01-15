@@ -12,24 +12,25 @@ import java.util.Map;
 @Controller
 public class RegistrationController {
     @Autowired
-    private UserRepository userRepo;
+    private UserRepository userRepository;
 
 
     @GetMapping("/registration")
-    public String registration() {
+    public String registration(Map<String, Object> model) {
+        model.put("message", " ");
         return "registration";
     }
 
     @PostMapping("/registration")
     public String addUser(User user, Map<String, Object> model) {
-        User userFromDb = userRepo.findByUsername(user.getUsername());
+        User userFromDb = userRepository.findByUsername(user.getUsername());
 
         if (userFromDb != null) {
             model.put("message", "User exists!");
             return "registration";
         }
 
-        userRepo.save(user);
+        userRepository.save(user);
 
         return "redirect:/login";
     }

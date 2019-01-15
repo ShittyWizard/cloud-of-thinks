@@ -1,8 +1,10 @@
 package app.controller;
 
 import app.domain.Blog;
+import app.domain.User;
 import app.repos.BlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,10 +35,10 @@ public class MainController {
 
     @PostMapping("/main")
     public String postBlog(
+            @AuthenticationPrincipal User user,
             @RequestParam String text,
-            @RequestParam String author,
             Map<String, Object> model) {
-        Blog blog = new Blog(text, author);
+        Blog blog = new Blog(text, user.getUsername());
         blogRepository.save(blog);
         Iterable<Blog> blogs = blogRepository.findAll();
         model.put("blogs", blogs);
