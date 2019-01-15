@@ -1,4 +1,5 @@
 <#import "parts/common.ftl" as c>
+<#import "parts/login.ftl" as l>
 
 <@c.page>
     <b> Welcome to main page</b>
@@ -7,7 +8,7 @@
         <div>
             <textarea cols="40" rows="5" placeholder="Write your text here" name="text"> </textarea>
         </div>
-        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <button type="submit"> Post</button>
     </form>
 
@@ -23,4 +24,6 @@
     <div><a href="/">
             <button> Back</button>
         </a></div>
+
+    <@l.logout/>
 </@c.page>
