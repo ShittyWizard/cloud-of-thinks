@@ -1,0 +1,10 @@
+.cot-login-input {
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    color: #346a93;
+}
+
+.cot-login-input:focus {
+    border: 2px solid #1f354b;
+}
