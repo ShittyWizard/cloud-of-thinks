@@ -15,6 +15,9 @@ public class Blog {
     private String author;
     private Date date;
 
+    private String fileName;
+
+
     public Blog() {
     }
 
@@ -22,6 +25,14 @@ public class Blog {
         this.text = text;
         this.author = author;
         this.date = new Date();
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     public Date getDate() {
