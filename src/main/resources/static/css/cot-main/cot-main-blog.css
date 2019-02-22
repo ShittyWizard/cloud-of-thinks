@@ -1,0 +1,35 @@
+.cot-main-blog {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    border: 2px solid #1f354b;
+    border-radius: 5px;
+    word-wrap: break-word;
+    background-color: darkgrey;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #1f354b;
+}
+
+.cot-main-blog:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 99.5%;
+    border: 25px solid;
+    border-color: #1f354b transparent transparent #1f354b;
+}
+
+.cot-main-blog:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 33px;
+    top: 99.5%;
+    border: 22px solid;
+    border-color: darkgrey transparent transparent darkgrey;
+}

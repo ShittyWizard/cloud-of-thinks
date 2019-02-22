@@ -1,0 +1,13 @@
+.cot-main-textarea {
+    width: 90%;
+    border: 2px solid #4c87be;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    font-family: EdPSInterlockCYR, "Comic Sans MS", sans-serif;
+    color: #1f354b;
+}
+
+.cot-main-textarea:focus {
+    border: 2px solid #1f354b;
+}

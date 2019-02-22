@@ -1,0 +1,10 @@
+.cot-main-blog-image {
+    border: 1px solid #346a93;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.cot-main-blog-image:hover {
+    box-shadow: 0 0 2px 1px #1f354b;
+}
